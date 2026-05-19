@@ -27,27 +27,6 @@ El projecte es divideix en 5 components principals ben estructurats:
 
 ---
 
-## 🚀 Guia de Configuració a Unity
-
-### Configuració del Jugador (Kitty)
-1. Assigna el script `KittyController.cs` al GameObject del teu personatge.
-2. Assegura't que el personatge tingui els components `Rigidbody2D`, `Animator`, `SpriteRenderer` i `CapsuleCollider2D`.
-3. Afegeix un component **Audio Source** al personatge i **desactiva** la seva casella *Play On Awake*.
-4. Arrossega el component *Audio Source* i els teus arxius de so (`.mp3` o `.wav`) a les caselles corresponents del script a l'Inspector.
-
-### Configuració de la Interfície (UI)
-1. En el teu objecte **Canvas**, afegeix el script `CanvaManager.cs`.
-2. Vincula els teus components de text de tipus **TextMeshPro - Text** a les variables `textCoins` i `textPotion`.
-3. En l'array `heartImages`, defineix la mida segons les teves vides màximes (ex: 3) i arrossega les imatges dels teus cors de la jerarquia. Col·loca el sprite del cor buit a la casella `emptyHeartSprite`.
-4. **¡Important!** Torna al objecte del teu jugador (Kitty) i arrossega el Canvas de la escena a la casella anomenada **Canva Manager** per enllaçar els dos sistemes.
-
-### Configuració d'Escenes (Build Settings)
-Perquè el flux de pantalles i botons funcioni sense errors, vés a `File -> Build Settings...` i afegeix les següents escenes respectant estrictament les majúscules i minúscules:
-* `Intro` (Menú Principal)
-* `GameScreen1` (Nivell de Joc)
-* `ScreenGameOver` (Pantalla de Derrota)
-* `ScreenWin` (Pantalla de Victòria)
-
 ## 📝 Bones Pràctiques Aplicades
 * **Codi DRY:** Reutilització de lògiques físiques i funcions centralitzades per al reinici de posició i el càlcul de dany.
 * **Noms auto-explicatius:** Variables i mètodes tipats adequadament en anglès tècnic per estandarditzar el desenvolupament.
